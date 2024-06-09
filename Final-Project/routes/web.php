@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PemasokController;
+use App\Http\Controllers\ProfilesController;
 
 
 
@@ -20,3 +21,4 @@ Route::get('/', function () {
     return view('layout.master');
 });
 Route::resource('/pemasok', PemasokController::class );
+Route::resource('/profiles', ProfilesController::class );
