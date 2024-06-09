@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PemasokController;
 use App\Http\Controllers\ProfilesController;
+use App\Http\Controllers\dashboardController;
 
 
 
@@ -22,3 +23,4 @@ Route::get('/', function () {
 });
 Route::resource('/pemasok', PemasokController::class );
 Route::resource('/profiles', ProfilesController::class );
+Route::get('/dashboard', [dashboardController::class, 'index']);
