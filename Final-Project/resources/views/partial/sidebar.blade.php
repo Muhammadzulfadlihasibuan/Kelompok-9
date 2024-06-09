@@ -35,3 +35,15 @@
             <span>Kategori</span>
         </a>
     </li
+    class="sidebar-item">
+     <form method="POST" action="{{ route('logout') }}" class="sidebar-link">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+        @csrf
+
+        <x-dropdown-link :href="route('logout')"
+                onclick="event.preventDefault();
+                            this.closest('form').submit();">
+            {{ __('Log Out') }}
+        </x-dropdown-link>
+    </form> 
+</ul>

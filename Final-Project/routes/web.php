@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [dashboardController::class, 'index']);
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::resource('/barangs', barangController::class );
+    Route::resource('/kategori', KategoriController::class );
     Route::resource('/pemasok', PemasokController::class );
     Route::resource('/profiles', ProfilesController::class );
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
