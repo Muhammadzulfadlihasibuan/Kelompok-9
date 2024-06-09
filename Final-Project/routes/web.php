@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PemasokController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layout.master');
 });
+Route::resource('/pemasok', PemasokController::class );
